@@ -17,6 +17,7 @@
 
 
 		<mapping resource="com/mani/gayi/hibernate/pojo/Employee.hbm.xml" />
+		<mapping resource="com/mani/gayi/hibernate/pojo/EmployeeDetail.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>

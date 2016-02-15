@@ -7,13 +7,13 @@
 
 		<meta attribute="class-description">This class contains employee details.</meta>
 
-		<id name="employeeId" type="int" column="employee_id">
+		<id name="employeeId" type="long" column="employee_id">
 			<generator class="native" />
 		</id>
 
+       <one-to-one name="employeeDetail" class="com.mani.gayi.hibernate.pojo.EmployeeDetail"
+            cascade="save-update"></one-to-one>
 
-
-		<property name="name" type="string" length="50" column="NAME" />
 
 		<property name="managerId" type="int" update="false" insert="false"
 			column="manager_id" length="10" />
@@ -27,7 +27,8 @@
 			<one-to-many class="com.mani.gayi.hibernate.pojo.Employee" />
 		</set>
 
-
+		
+		<property name="name" type="string" length="50" column="NAME" />
 
 
 

@@ -18,7 +18,7 @@ public class UserDAO {
 		
 		// Accessing the Database using HQL and Querying whether the username and password is present or not.
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		String hql = "FROM Employee E WHERE E.username = :username and E.password= :password";
+		String hql = "FROM EmployeeDetail E WHERE E.username = :username and E.password= :password";
 		Query query = session.createQuery(hql);
 		query.setParameter("username",uname);
 		query.setParameter("password",pass);

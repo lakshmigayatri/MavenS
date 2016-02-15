@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping >
+ 
+    <class name="com.mani.gayi.hibernate.pojo.EmployeeDetail" table="EMPLOYEEDETAIL">
+ 
+        <id name="employeeDetailId" type="java.lang.Long">
+            <column name="EMPLOYEE_DETAIL_ID" />
+            <generator class="foreign">
+                <param name="property">employee</param>
+            </generator>
+        </id>
+        
+        <one-to-one name="employee" class="com.mani.gayi.hibernate.pojo.Employee"
+            constrained="true"></one-to-one>
+        
+         
+        <property name="email" column="EMAIL"/>
+        <property name="phone" column="PHONE" />
+        <property name="username" column="USERNAME"/>
+        <property name="password" column="PASSWORD"/>
+    </class>
+ 
+</hibernate-mapping>
