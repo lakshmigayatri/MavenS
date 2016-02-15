@@ -4,8 +4,8 @@
 
 <s:form action="verify">
 
-	<s:textfield name="uname" label="Enter Username" /><br>
-	<s:password name="password" label="Enter Password" /><br>
+	<s:textfield name="userstrutsbean.username" label="Enter Username" /><br>
+	<s:password name="userstrutsbean.password" label="Enter Password" /><br>
      
     <s:submit value="Click" align="center" /> 
 
