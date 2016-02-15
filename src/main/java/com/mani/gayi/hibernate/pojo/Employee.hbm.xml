@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mani.gayi.hibernate.pojo.Employee" table="EMPLOYEE">
+
+		<meta attribute="class-description">This class contains employee details.</meta>
+
+		<id name="employeeId" type="int" column="employee_id">
+			<generator class="native" />
+		</id>
+
+
+
+		<property name="name" type="string" length="50" column="NAME" />
+		<property name="email" type="string" length="50" column="EMAIL" />
+		<property name="phone" type="string" length="50" column="PHONE" />
+		<property name="username" type="string" length="50" column="USERNAME" />
+		<property name="password" type="string" length="50" column="PASSWORD" />
+
+		<property name="managerId" type="int" update="false" insert="false"
+			column="manager_id" length="10" />
+			
+		<many-to-one name="manager" class="com.mani.gayi.hibernate.pojo.Employee"
+			column="manager_id" not-null="false" />
+
+		<set name="employees" table="EMPLOYEE" lazy="false" cascade="all-delete-orphan"
+			inverse="false">
+			<key column="manager_id" />
+			<one-to-many class="com.mani.gayi.hibernate.pojo.Employee" />
+		</set>
+
+
+
+
+
+
+	</class>
+</hibernate-mapping>

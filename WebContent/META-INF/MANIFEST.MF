@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Class-Path: 
+Class-Path: lib/struts2-core-2.3.4.1.jar 
 
