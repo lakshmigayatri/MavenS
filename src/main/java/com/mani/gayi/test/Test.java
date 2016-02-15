@@ -19,14 +19,8 @@ public class Test {
 	            transaction = session.beginTransaction();
 	             
 	            Employee manager = new Employee("Puneet");
-	             manager.setUsername("p");
-	             manager.setPassword("p");
 	            Employee employee1 = new Employee("Sahil");
-	            employee1.setUsername("e1");
-	            employee1.setPassword("e1");
 	            Employee employee2 = new Employee("Geet");
-	            employee2.setUsername("e2");
-	            employee2.setPassword("e2");
 	            employee1.setManager(manager);
 	            employee2.setManager(manager);
 	            session.save(manager);

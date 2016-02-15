@@ -14,10 +14,6 @@
 
 
 		<property name="name" type="string" length="50" column="NAME" />
-		<property name="email" type="string" length="50" column="EMAIL" />
-		<property name="phone" type="string" length="50" column="PHONE" />
-		<property name="username" type="string" length="50" column="USERNAME" />
-		<property name="password" type="string" length="50" column="PASSWORD" />
 
 		<property name="managerId" type="int" update="false" insert="false"
 			column="manager_id" length="10" />
